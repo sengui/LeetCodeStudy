@@ -1,4 +1,4 @@
-package org.data.array.easy;
+package array.easy;
 
 import java.util.Arrays;
 
