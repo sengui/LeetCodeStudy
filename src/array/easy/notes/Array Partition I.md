@@ -43,7 +43,7 @@ Given an array of 2n integers, your task is to group these integers into n pairs
     }
 ```
 ##### Notes: 
-  将数组排序，取奇数位的值相加
+  sort array, then result is sum of the odd of value in the array
 
 
 
