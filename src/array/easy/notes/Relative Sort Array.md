@@ -10,10 +10,10 @@ Elements that don't appear in arr2 should be placed at the end of arr1 in **asce
     Output: [2,2,2,1,4,3,3,9,6,7,19]
 
 #### Constraints:: 
-    + arr1.length, arr2.length <= 1000
-    + 0 <= arr1[i], arr2[i] <= 1000
-    + Each arr2[i] is distinct.
-    + Each arr2[i] is in arr1.
+  * arr1.length, arr2.length <= 1000
+  * 0 <= arr1[i], arr2[i] <= 1000
+  * Each arr2[i] is distinct.
+  * Each arr2[i] is in arr1.
 
 
 ## Solution
