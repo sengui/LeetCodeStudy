@@ -1,0 +1,46 @@
+# [1010. Pairs of Songs With Total Durations Divisible by 60](https://leetcode.com/problems/pairs-of-songs-with-total-durations-divisible-by-60/)
+### Summary 
+In a list of songs, the i-th song has a duration of time[i] seconds. 
+
+Return the number of pairs of songs for which their total duration in seconds is divisible by 60.  Formally, we want the number of indices i < j with (time[i] + time[j]) % 60 == 0.
+
+#### Example 1:
+    Input: [30,20,150,100,40]   
+    Output: 3  
+    Explanation: Three pairs have a total duration divisible by 60:
+                 (time[0] = 30, time[2] = 150): total duration 180
+                 (time[1] = 20, time[3] = 100): total duration 120
+                 (time[1] = 20, time[4] = 40): total duration 60  
+           
+#### Example 2:
+    Input: [60,60,60]   
+    Output: 3  
+    Explanation: All three pairs have a total duration of 120, which is divisible by 60. 
+
+#### Notes: 
+    1. 1 <= time.length <= 60000
+    2. 1 <= time[i] <= 500
+
+
+## Solution
+```java
+    public class PairsofSongsWithTotalDurationsDivisibleby60 {
+        public int numPairsDivisibleBy60(int[] time) {
+            int result = 0;
+            int[] remainderArr = new int[60];
+            int remainder;
+            int index;
+    
+            for (int i = 0; i < time.length; i++) {
+                remainder = time[i] % 60;
+                index = remainder == 0 ? 0 : 60 - remainder;
+                result += remainderArr[index];
+                remainderArr[remainder] ++;
+            }
+            return result;
+        }
+    }
+```
+
+
+
